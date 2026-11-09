@@ -3,19 +3,13 @@ import { fileURLToPath, URL } from "node:url"
 
 export default defineConfig({
   resolve: {
-    build: {
-      rolldownOptions: {
-        input: {
-          inicio: fileURLToPath(new URL("./index.html", import.meta.url)),
-          contato: fileURLToPath(new URL("./contato.html", import.meta.url)),
-        },
-      },
-    },
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
+
       "@components": fileURLToPath(
         new URL("./src/components", import.meta.url),
       ),
+
       "@layout": fileURLToPath(new URL("./src/layout", import.meta.url)),
     },
   },
@@ -23,5 +17,15 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+  },
+
+  build: {
+    rolldownOptions: {
+      input: {
+        inicio: fileURLToPath(new URL("./index.html", import.meta.url)),
+
+        contato: fileURLToPath(new URL("./contato.html", import.meta.url)),
+      },
+    },
   },
 })
