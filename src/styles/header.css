@@ -1,0 +1,141 @@
+/* CELULAR */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--cor-header-fundo);
+  border-bottom: 1px solid var(--cor-header-borda);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  width: min(100%, var(--largura-conteudo));
+  min-height: 5rem;
+  margin-inline: auto;
+  padding: var(--espaco-4);
+}
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--cor-header-texto);
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.nav__brand:hover { color: var(--cor-header-destaque); }
+.nav__desktop { display: none; }
+.nav__list, .nav__mobile-list { margin: 0; padding: 0; list-style: none; }
+.nav__list { display: flex; align-items: center; gap: var(--espaco-2); }
+.nav__item { min-width: 0; }
+.nav__link {
+  display: block;
+  padding: var(--espaco-3);
+  border-radius: var(--raio-pequeno);
+  color: var(--cor-texto);
+  text-decoration: none;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+.nav__link-content { display: flex; align-items: center; gap: var(--espaco-2); }
+.nav__icon { display: inline-flex; flex-shrink: 0; }
+.nav__link:hover, .nav__link[aria-current='page'] {
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+}
+.nav .nav__link { color: var(--cor-header-texto); }
+.nav .nav__link:hover, .nav .nav__link[aria-current='page'] {
+  background-color: var(--cor-header-hover);
+  color: var(--cor-header-destaque);
+}
+.nav__actions, .drawer__actions { display: flex; align-items: center; gap: var(--espaco-2); }
+.nav__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+.nav__button:hover { border-color: var(--cor-primaria); color: var(--cor-primaria); background-color: var(--cor-fundo); }
+.nav .nav__button {
+  background-color: var(--cor-header-fundo);
+  border-color: var(--cor-header-borda);
+  color: var(--cor-header-texto);
+}
+.nav .nav__button:hover {
+  background-color: var(--cor-header-hover);
+  border-color: var(--cor-header-destaque);
+  color: var(--cor-header-destaque);
+}
+.nav :focus-visible { outline-color: var(--cor-header-destaque); }
+.nav__theme-toggle--desktop { display: none; }
+.nav__drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background-color: var(--cor-overlay);
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+.nav__drawer-overlay.is-open { opacity: 1; }
+.nav__drawer {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 120;
+  width: min(24rem, calc(100% - 4.5rem));
+  height: 100dvh;
+  padding: var(--espaco-4);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  box-shadow: var(--sombra-menu);
+  transform: translateX(-100%);
+  transition: transform 260ms ease;
+}
+.nav__drawer.is-open { transform: translateX(0); }
+.drawer__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  margin-bottom: var(--espaco-8);
+}
+.drawer__title { font-size: var(--texto-grande); }
+.nav__mobile-list { display: grid; gap: var(--espaco-2); }
+.nav__mobile-list .nav__link { padding: var(--espaco-4); }
+.header.menu-aberto .nav__menu-toggle {
+  position: fixed;
+  top: var(--espaco-4);
+  right: var(--espaco-4);
+  z-index: 130;
+}
+.header.menu-restaurado .nav__drawer,
+.header.menu-restaurado .nav__drawer-overlay { transition: none; }
+
+/* TABLET */
+@media (min-width: 40rem) {
+  .nav { gap: var(--espaco-6); }
+  .nav__drawer { padding: var(--espaco-6); }
+}
+
+/* DESKTOP — mesmo limite usado no menu.js */
+@media (min-width: 64rem) {
+  .nav__desktop { display: block; margin-left: auto; }
+  .nav__theme-toggle--desktop { display: inline-flex; }
+  .nav__menu-toggle, .nav__drawer, .nav__drawer-overlay { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav__link, .nav__button, .nav__drawer, .nav__drawer-overlay { transition: none; }
+}

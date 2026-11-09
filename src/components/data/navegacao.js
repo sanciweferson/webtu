@@ -1,0 +1,45 @@
+export const itensNavegacao = [
+  {
+    id: "inicio",
+    texto: "Início",
+    caminho: "#inicio",
+    icone: "inicio",
+    varianteIcone: "default",
+  },
+  {
+    id: "capitulos",
+    texto: "Capítulos",
+    caminho: "#capitulos",
+    icone: "capitulos",
+    varianteIcone: "default",
+  },
+  {
+    id: "resumo",
+    texto: "Resumo",
+    caminho: "#resumo",
+    icone: "resumo",
+    varianteIcone: "default",
+  },
+  {
+    id: "aprendizados",
+    texto: "Aprendizados",
+    caminho: "#aprendizados",
+    icone: "aprendizados",
+    varianteIcone: "default",
+  },
+  {
+    id: "autor",
+    texto: "Autor",
+    caminho: "#autor",
+    icone: "autor",
+    varianteIcone: "default",
+  },
+  {
+    id: "contato",
+    texto: "Contato",
+    caminho: "./contato.html",
+    icone: "contato",
+    varianteIcone: "default",
+    novaAba: true,
+  },
+]

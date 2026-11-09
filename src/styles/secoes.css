@@ -1,0 +1,485 @@
+/* ============================================================
+   ESTRUTURA COMPARTILHADA
+   ============================================================ */
+/* CELULAR — estilos base */
+.curso__container {
+  width: min(100%, var(--largura-conteudo));
+  margin-inline: auto;
+  padding-inline: var(--espaco-4);
+}
+
+.curso__secao {
+  padding-block: var(--espaco-16);
+}
+
+.curso__secao--suave {
+  background-color: var(--cor-superficie);
+}
+
+.curso__cabecalho {
+  max-width: 48rem;
+  margin: 0 auto var(--espaco-12);
+  text-align: center;
+}
+
+.curso__cabecalho h2,
+.curso__duas-colunas h2,
+.curso__publico h2,
+.curso__newsletter h2,
+.curso__redes h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.curso__cabecalho p {
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-grande);
+}
+
+.curso__linha {
+  display: block;
+  width: 4rem;
+  height: 0.25rem;
+  margin-block: var(--espaco-4) var(--espaco-6);
+
+  border-radius: var(--raio-redondo);
+  background-color: var(--cor-primaria);
+}
+
+.curso__cabecalho .curso__linha {
+  margin-inline: auto;
+}
+
+.curso__cartao {
+  padding: var(--espaco-8);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-medio);
+
+  background-color: var(--cor-superficie);
+}
+
+.curso__cartao h3 {
+  margin-bottom: var(--espaco-3);
+  font-size: var(--texto-grande);
+  line-height: 1.35;
+}
+
+.curso__cartao p {
+  color: var(--cor-texto-suave);
+}
+
+.curso__botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 3rem;
+  padding: var(--espaco-3) var(--espaco-6);
+
+  border: 1px solid transparent;
+  border-radius: var(--raio-redondo);
+
+  background-color: var(--cor-destaque);
+  color: var(--cor-sobre-destaque);
+
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.curso__botao:hover {
+  border-color: currentColor;
+  color: var(--cor-sobre-destaque);
+}
+
+/* ============================================================
+   TÓPICOS
+   ============================================================ */
+
+.curso__topicos {
+  display: grid;
+  gap: var(--espaco-8);
+}
+
+.curso__topico-imagem {
+  overflow: hidden;
+  border-radius: var(--raio-medio);
+}
+
+.curso__topico img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 240ms ease;
+}
+
+.curso__topico:hover img {
+  transform: scale(1.04);
+}
+
+.curso__topico h3 {
+  margin-top: var(--espaco-3);
+  font-size: var(--texto-base);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   CAPÍTULOS
+   ============================================================ */
+
+.curso__capitulos {
+  display: grid;
+  gap: var(--espaco-6);
+}
+
+.curso__capitulo {
+  text-align: center;
+}
+
+.curso__capitulo img {
+  display: block;
+  width: 8rem;
+  height: auto;
+  margin: 0 auto var(--espaco-6);
+}
+
+/* ============================================================
+   RESUMO
+   ============================================================ */
+
+.curso__resumo {
+  padding: var(--espaco-4);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-medio);
+  background-color: var(--cor-fundo);
+}
+
+.curso__grupo + .curso__grupo {
+  margin-top: var(--espaco-8);
+}
+
+.curso__grupo h3 {
+  padding: var(--espaco-3) var(--espaco-4);
+  border-radius: var(--raio-pequeno);
+
+  background-color: var(--cor-primaria);
+  color: var(--cor-sobre-primaria);
+  font-size: var(--texto-grande);
+}
+
+.curso__aulas {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.curso__aulas li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espaco-4);
+
+  padding: var(--espaco-6) var(--espaco-4);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.curso__aulas li:last-child {
+  border-bottom: 0;
+}
+
+.curso__numero {
+  flex-shrink: 0;
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+/* ============================================================
+   PÚBLICO
+   ============================================================ */
+
+.curso__publico {
+  display: grid;
+}
+
+.curso__publico-imagem {
+  min-height: 20rem;
+
+  background-image: url('/images/audience.jpg');
+  background-position: center top;
+  background-size: cover;
+}
+
+.curso__publico-conteudo {
+  padding: var(--espaco-12) var(--espaco-6);
+
+  background-color: var(--cor-primaria);
+  color: var(--cor-sobre-primaria);
+}
+
+.curso__publico-conteudo p {
+  margin-block: var(--espaco-6);
+}
+
+.curso__lista-marcada {
+  margin-block: var(--espaco-6);
+  padding-left: var(--espaco-6);
+}
+
+.curso__lista-marcada li + li {
+  margin-top: var(--espaco-3);
+}
+
+/* ============================================================
+   APRENDIZADOS
+   ============================================================ */
+
+.curso__aprendizados {
+  display: grid;
+  gap: var(--espaco-6);
+}
+
+.curso__aprendizado {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espaco-4);
+}
+
+.curso__icone {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  color: var(--cor-primaria);
+}
+
+/* ============================================================
+   DETALHES E AUTOR
+   ============================================================ */
+
+.curso__duas-colunas {
+  display: grid;
+  align-items: center;
+  gap: var(--espaco-12);
+}
+
+.curso__ilustracao {
+  display: block;
+  width: 100%;
+  max-width: 31.25rem;
+  height: auto;
+  margin-inline: auto;
+}
+
+.curso__duas-colunas p {
+  margin-block: var(--espaco-6);
+}
+
+/* ============================================================
+   ESTATÍSTICAS
+   ============================================================ */
+
+.curso__estatisticas {
+  padding-block: var(--espaco-16);
+  color: var(--cor-hero-texto);
+
+  background-color: var(--cor-hero-fundo);
+  background-image:
+    linear-gradient(
+      var(--cor-hero-overlay),
+      var(--cor-hero-overlay)
+    ),
+    url('/images/stats-background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.curso__numeros {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--espaco-6);
+
+  margin-block: var(--espaco-8);
+  text-align: center;
+}
+
+.curso__numeros > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.curso__numeros dt {
+  font-size: var(--texto-pequeno);
+}
+
+.curso__numeros dd {
+  order: -1;
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.curso__aviso {
+  font-size: var(--texto-pequeno);
+}
+
+/* ============================================================
+   NEWSLETTER
+   ============================================================ */
+
+.curso__newsletter {
+  padding: var(--espaco-12) var(--espaco-6);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-medio);
+
+  background-color: var(--cor-superficie);
+  text-align: center;
+}
+
+.curso__newsletter > p {
+  max-width: 40rem;
+  margin: var(--espaco-6) auto;
+  color: var(--cor-texto-suave);
+}
+
+.curso__formulario {
+  display: grid;
+  gap: var(--espaco-4);
+
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.curso__formulario label {
+  text-align: left;
+  font-weight: 600;
+}
+
+.curso__formulario input {
+  width: 100%;
+  min-width: 0;
+  padding: var(--espaco-4);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-redondo);
+
+  font: inherit;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.curso__formulario input::placeholder {
+  color: var(--cor-texto-suave);
+}
+
+.curso__formulario [role='status'] {
+  margin: 0;
+}
+
+/* ============================================================
+   REDES SOCIAIS
+   ============================================================ */
+
+.curso__redes {
+  padding-block: var(--espaco-12);
+  background-color: var(--cor-superficie);
+  text-align: center;
+}
+
+.curso__redes p {
+  margin-block: var(--espaco-6);
+  color: var(--cor-texto-suave);
+}
+
+.curso__redes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espaco-3);
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.curso__redes-lista a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-2);
+
+  min-height: 2.75rem;
+  padding: var(--espaco-3) var(--espaco-4);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.curso__redes-lista a:hover {
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* TABLET */
+@media (min-width: 40rem) {
+  .curso__topicos,
+  .curso__aprendizados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .curso__resumo {
+    padding: var(--espaco-8);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 64rem) {
+  .curso__topicos {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .curso__capitulos,
+  .curso__aprendizados {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .curso__duas-colunas,
+  .curso__publico {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .curso__publico-conteudo {
+    padding: var(--espaco-16);
+  }
+
+  .curso__autor > img {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .curso__autor > div {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curso__topico img {
+    transition: none;
+  }
+
+  .curso__topico:hover img {
+    transform: none;
+  }
+}
+.curso__duas-colunas > *, .curso__aprendizados > *, .curso__topicos > *, .curso__capitulos > * { min-width: 0; }
+

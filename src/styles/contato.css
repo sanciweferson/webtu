@@ -1,0 +1,31 @@
+/* CELULAR */
+#conteudo.contato {
+  width: min(100%, 40rem);
+  margin-inline: auto;
+  padding: var(--espaco-8) var(--espaco-4);
+}
+.contato h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; }
+.contato > p { margin-top: var(--espaco-4); }
+.contato form { display: grid; gap: var(--espaco-3); margin-block: var(--espaco-8); }
+.contato label { font-weight: 600; }
+.contato input, .contato textarea, .contato button {
+  width: 100%;
+  min-width: 0;
+  padding: var(--espaco-3);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+  font: inherit;
+  color: var(--cor-texto);
+  background-color: var(--cor-superficie);
+}
+.contato input, .contato button { min-height: 2.75rem; }
+.contato input::placeholder, .contato textarea::placeholder { color: var(--cor-texto-suave); }
+.contato button { cursor: pointer; color: var(--cor-sobre-primaria); background-color: var(--cor-primaria); }
+.contato button:hover { background-color: var(--cor-primaria-hover); }
+
+/* TABLET */
+@media (min-width: 40rem) {
+  #conteudo.contato { padding-block: var(--espaco-12); padding-inline: var(--espaco-6); }
+}
+
+/* DESKTOP: mantém a largura confortável de leitura do tablet. */

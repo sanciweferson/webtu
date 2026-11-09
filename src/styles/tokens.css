@@ -1,0 +1,62 @@
+:root {
+  /* Tipografia */
+  --fonte-principal: system-ui, sans-serif;
+  --texto-pequeno: 0.875rem;
+  --texto-base: 1rem;
+  --texto-grande: 1.25rem;
+
+  /* Espaçamento */
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 0.75rem;
+  --espaco-4: 1rem;
+  --espaco-6: 1.5rem;
+  --espaco-8: 2rem;
+  --espaco-12: 3rem;
+  --espaco-16: 4rem;
+
+  /* Estrutura */
+  --largura-conteudo: 75rem;
+  --raio-pequeno: 0.375rem;
+  --raio-medio: 0.75rem;
+  --raio-redondo: 999px;
+
+  /* Cabeçalho escuro nos dois temas */
+  --cor-header-fundo: oklch(24% 0.02 260);
+  --cor-header-texto: oklch(97.833% 0.00692 353.876);
+  --cor-header-borda: oklch(40% 0.025 260);
+  --cor-header-destaque: oklch(83% 0.14 80);
+  --cor-header-hover: oklch(31% 0.02 260);
+
+  /* Imagens de fundo e menu */
+  --cor-hero-fundo: oklch(18% 0.015 260);
+  --cor-hero-texto: oklch(100% 0 0);
+  --cor-hero-overlay: oklch(15% 0.02 260 / 65%);
+  --cor-overlay: oklch(0% 0 0 / 55%);
+  --sombra-menu: 0 1rem 3rem oklch(0% 0 0 / 20%);
+
+  /* Tema claro */
+  color-scheme: light;
+  --cor-fundo: oklch(98% 0.005 260);
+  --cor-superficie: oklch(100% 0 0);
+  --cor-texto: oklch(24% 0.02 260);
+  --cor-texto-suave: oklch(44% 0.025 260);
+  --cor-borda: oklch(85% 0.015 260);
+  --cor-primaria: oklch(48% 0.18 25);
+  --cor-primaria-hover: oklch(42% 0.16 25);
+  --cor-sobre-primaria: oklch(100% 0 0);
+  --cor-destaque: oklch(83% 0.14 80);
+  --cor-sobre-destaque: oklch(24% 0.02 260);
+}
+
+:root[data-tema='escuro'] {
+  color-scheme: dark;
+  --cor-fundo: oklch(18% 0.015 260);
+  --cor-superficie: oklch(24% 0.02 260);
+  --cor-texto: oklch(96% 0.005 260);
+  --cor-texto-suave: oklch(77% 0.02 260);
+  --cor-borda: oklch(40% 0.025 260);
+  --cor-primaria: oklch(76% 0.13 25);
+  --cor-primaria-hover: oklch(82% 0.1 25);
+  --cor-sobre-primaria: oklch(18% 0.015 260);
+}
